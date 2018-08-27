@@ -11,4 +11,6 @@ Steps:
 2) Connect to ATP by using SQL developer. For this please refer to the guide on how to connect to ATP via sql developer: https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/getting-started.html#GUID-00645C09-4E76-44C6-8BBE-B433D501AADB
 3) This will create the table Employee
 4) After this run node server.js
-5) Go to localhost:8080
+5) Go to localhost:8080 and the table of employee data is displayed
+6) To insert in a record into ATP, go to Postman and execute the post function found in the server.js. A sample post function is here:
+localhost:8080/addEmployee. This will default add in an employee into ATP. 
