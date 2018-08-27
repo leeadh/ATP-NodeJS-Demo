@@ -7,7 +7,8 @@ This is a demo to showcase how to use Autonomous Transaction Processing (ATP) an
 # Pre-requisites #
 1) Please first and foremost refer to the guide docs here on how to provision an ATP instance: https://docs.oracle.com/en/cloud/paas/atp-cloud/index.html
 2) Please then create an instance of ATP as per the guide
-3) Download the necessary oraclient for NodeJS. For this, please refer here: https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/connecting-nodejs.html#GUID-AB1E323A-65B9-47C4-840B-EC3453F3AD53
+3) Download the necessary oraclient for NodeJS. For this, please refer here: https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/connecting-nodejs.html#GUID-AB1E323A-65B9-47C4-840B-EC3453F3AD53. 
+4) Remember to download the ATP zip wallet credentials of ATP and place the zip file into this repo when you have git pulled. Also , unzip the wallet in this directory. 
 
 # Steps: #
 1) First, refer to the sql statements in the folder when u do a git pull
