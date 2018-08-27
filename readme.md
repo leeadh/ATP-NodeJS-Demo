@@ -1,1 +1,14 @@
 
+This is a demo to showcase how to use Autonomous Transaction Processing (ATP) and connect with Node JS. This is using Node JS to render a simple HTML table and a simple post function which will write and commit to ATP. The templating engine in EJS. 
+
+Pre-requisites
+1) Please first and foremost refer to the guide docs here on how to provision an ATP instance: https://docs.oracle.com/en/cloud/paas/atp-cloud/index.html
+2) Please then create an instance of ATP as per the guide
+3) Download the necessary oraclient for NodeJS. For this, please refer here: https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/connecting-nodejs.html#GUID-AB1E323A-65B9-47C4-840B-EC3453F3AD53
+
+Steps:
+1) First, refer to the sql statements in the folder when u do a git pull
+2) Connect to ATP by using SQL developer. For this please refer to the guide on how to connect to ATP via sql developer: https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/getting-started.html#GUID-00645C09-4E76-44C6-8BBE-B433D501AADB
+3) This will create the table Employee
+4) After this run node server.js
+5) Go to localhost:8080
