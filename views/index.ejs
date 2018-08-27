@@ -1,0 +1,26 @@
+<% include partials/header.ejs %>
+    <div class="table-wrapper">
+        <% if (players.rows.length > 0) {%>
+            <table class="table table-hovered">
+                <thead class="thead-dark">
+                    <% for (var col = 0; col < players.metaData.length; col++) { %>
+                        <th scope = "col"><%= players.metaData[col].name%></th>
+                     <% } %>
+                </thead>
+                <tbody>
+                    <% for (var row = 0; row < players.rows.length; row++) { %>
+                        <tr>
+                            <% for(var col = 0; col < players.rows[row].length; col++) { %>
+                                <td><%=  players.rows[row][col] %></td>
+                            <% } %>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">No players found. Go <a href="/add" >here</a> to add players.</p>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
