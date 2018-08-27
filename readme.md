@@ -15,5 +15,9 @@ This is a demo to showcase how to use Autonomous Transaction Processing (ATP) an
 3) This will create the table Employee
 4) After this run node server.js
 5) Go to localhost:8080 and the table of employee data is displayed
+
+![image](https://user-images.githubusercontent.com/15122358/44667451-61835200-aa4d-11e8-93b0-6b5e8ac2b344.png)
+
+
 6) To insert in a record into ATP, go to Postman and execute the post function found in the server.js. A sample post function is here:
 localhost:8080/addEmployee. This will default add in an employee into ATP. 
