@@ -1,38 +1,92 @@
 <% include partials/header.ejs %>
     <div class="container">
-        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+        <form class="add-player-form" id="addplayer" action="/addemployee" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="first_name" id="first-name" placeholder="First Name" required>
+                    <input type="text" class="form-control" name="empid" id="empid" value=<%= players.rows[0][0]+1%> readonly = "readonl"y>
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="fname" id="first-name" placeholder="First Name" required>
                 </div>
                 <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="last_name" id="last-name" placeholder="Last Name" required>
+                    <input type="text" class="form-control" name="lname" id="last-name" placeholder="Last Name" required>
                 </div>
                 <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="email" required>
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-6">
-                    <input type="number" class="form-control" name="number" id="number" placeholder="Number" required>
+                <div class="form-group col-md-4">
+                    <input type="number" class="form-control" name="phonenumber" id="phonenumber" placeholder="Phone Number" required>
                 </div>
-                <div class="form-group col-md-6">
-                    <select id="position" name="position" class="form-control" required>
-                        <option selected disabled>Choose position</option>
-                        <option>Goalkeeper</option>
-                        <option>Defender</option>
-                        <option>Midfielder</option>
-                        <option>Forward</option>
+                <div class="form-group col-md-4">
+                    <input type="date" class="form-control" name="hire_date" id="hire_date" placeholder="Date" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="job_id" id="job_id" placeholder="job" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <select id="comm_pt" name="comm_pt" class="form-control" required>
+                        <option selected disabled>Choose comm PT</option>
+                        <option>0.1</option>
+                        <option>0.2</option>
+                        <option>0.3</option>
+                        <option>0.4</option>
                     </select>
                 </div>
-                <div class="col-md-12">
-                    <label for="player-img"><b>Player Image</b></label><br>
-                    <input type="file" name="image" id="player-img" class="" required>
+                <div class="form-group col-md-4">
+                    <select id="manager" name="manager" class="form-control" required>
+                        <option selected disabled>Choose manager ID</option>
+                        <% for (var row = 0; row < users.rows.length; row++) { %>
+                            <option><%= users.rows[row][0]%></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="number" class="form-control" name="salary" id="salary" placeholder="salary" required>
+                </div>                
+            </div>
+            <div class = "form-row">
+                <div class="form-group col-md-4">
+                    <select id="department_id" name="department_id" class="form-control" required>
+                        <option selected disabled>Choose dept ID</option>
+                        <% for (var row = 0; row < users.rows.length; row++) { %>
+                            <option><%= users.rows[row][1]%></option>
+                        <% } %>
+                    </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary float-right">Add Player</button>
+
+
+
+            <button type="submit" class="btn btn-primary float-right">Add Employee</button>
         </form>
     </div>
-</div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            
+            </div>
+    </div>
 </body>
 </html>
