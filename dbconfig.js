@@ -1,5 +1,5 @@
 module.exports= {
-dbuser: 'xxx',
-dbpassword: 'xxx#',
-connectString: 'demo_high'
+    dbuser: 'xxx',
+    dbpassword: 'xxxx#',
+    connectString: 'adrdemo_high'
 };
